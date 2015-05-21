@@ -170,6 +170,8 @@ double D3 = 0.1233153E-5;
 double E2 = 0.48E-3;
 double E3 = 0.411051E-6;
 
+int dtime(double p[]);
+
 int main()
 {
 
@@ -677,8 +679,7 @@ int main()
 #include <ctype.h>
 #define HZ 50
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -715,8 +716,7 @@ double p[];
 
 struct rusage rusage;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -748,8 +748,7 @@ double p[];
 
 struct tms tms;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -786,8 +785,7 @@ struct tbuffer_t
 
 struct tbuffer_t tms;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -813,8 +811,7 @@ double p[];
 #define HZ 100
 struct time tnow;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -841,8 +838,7 @@ double p[];
 #define HZ CLOCKS_PER_SEC
 clock_t tnow;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -865,8 +861,7 @@ double p[];
 
 #define HZ 60
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -886,8 +881,7 @@ double p[];
 #ifdef IPSC
 extern double dclock();
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
   double q;
 
@@ -908,8 +902,7 @@ double p[];
 
 fortran double second();
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q,v;
 
@@ -932,8 +925,7 @@ double p[];
 #ifdef CTimer
 #include <time.h>
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double    q;
  clock_t   clock(void);
@@ -956,8 +948,7 @@ double p[];
 
 struct timeval tnow;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -980,8 +971,7 @@ double p[];
 #include <sys/timesu.h>
 struct tmsu rusage;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -1025,8 +1015,7 @@ static void     Remove_timer( )
  mgrInited = FALSE;
 }
 
-int     dtime( p )
-double p[];
+int dtime(double p[])
 {
  if ( mgrInited ) {
     RMV_TIMER;
@@ -1057,8 +1046,7 @@ double p[];
 #ifdef PARIX
 #include <sys/time.h>
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -1086,8 +1074,7 @@ double p[];
 
 struct rusage rusage;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -1110,8 +1097,7 @@ double p[];
 #ifdef WIN32
 #include <windows.h>
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
 
@@ -1136,8 +1122,7 @@ double p[];
 
 struct tms tms;
 
-dtime(p)
-double p[];
+int dtime(double p[])
 {
  double q;
  times(&tms);
