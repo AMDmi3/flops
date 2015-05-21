@@ -170,7 +170,7 @@ double D3 = 0.1233153E-5;
 double E2 = 0.48E-3;
 double E3 = 0.411051E-6;
 
-void main()
+int main()
 {
 
 #ifdef ROPT
