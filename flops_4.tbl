@@ -1,0 +1,954 @@
+Latest flops.c results, MFLOPS(4), are included below.
+
+The most recent program version (flops.c) and latest results
+(flops_1.tbl, flops_2.tbl, flops_3.tbl, and flops_4.tbl) are available
+via anonymous ftp from 'ftp.nosc.mil' in directory 'pub/aburto'. The
+ftp.nosc.mil IP address is: 128.49.192.51
+
+I'd appreciate any new results of any kind (new machines, compilers,
+compiler options). I will also periodically post results to
+'comp.benchmarks'. Send results to: aburto@nosc.mil. Thank you very
+much ...
+
+***************************************************************************
+FLOPS C Program (double precision) Version 2.0,  18 Dec 1992
+
+MFLOPS(4) Weightings: FADD 42.9%, FSUB 2.2%, FMUL 54.9%, FDIV 0.0%.       -
+          The code for MFLOPS(4) is fully vectorizable. The percentage    -
+          of FDIV's is however zero.                                      -
+                                                                          -
+                                                                          -
+
+Results as of 11 Sep 1997:
+
+    System           OS, Compiler           CPU/FPU    FPU  MFLOPS(4)  REF
+                                                      (MHz)               
+### ---------------- -------------------- ----------- ----- --------- ----
+001 SGI Challenge L  Irix 6.0             R8000-18CPU    75 3378.6699   84
+002 SGI Challenge L  Irix 6.0             R8000-18CPU    75 3271.0280   84
+003 SGI Origin 2000  -------------------- R10k--32CPU ----- 1696.1266  142
+004 SGI Origin 200   Irix 6.4             R10k--04CPU   180 1248.4087  151
+005 SGI Challenge L  Irix 6.0             R8000-04CPU    75  738.9813   82
+006 Alphasystem 4000 Digital Unix V4.0B   21164-02CPU   466  570.3468  147
+007 Cray Y-MP C90    C90/16256            -----------   240  525.9753    9
+008 Cray Y-MP C90    -------------------- -----------   250  520.2821   45
+009 FujitsuVP2200/10 UXP/M V10L10         -----------   312  449.4940   20
+010 Enterprise 4K/10 Solaris 2.5.1        UltraSPARC    250  446.5466  145
+011 DEC 8400 5/300   Digital UNIX V4.0    DEC 21164     300  367.6656  122
+012 SGI Origin 2000  -------------------- R10k--01CPU -----  345.3398  142
+013 SGI Indigo2      Irix 6.2             MIPS R10000   195  339.3153  126
+014 DEC 600 5/266    Digital UNIX V3.2c   -----------   266  325.6146  105
+015 SGI Origin 200   Irix 6.4             R10k--04CPU   180  312.0853  151
+016 Sun UltraSPARC-1 Solaris 2.5          UltraSPARC1   167  300.1677  108
+017 SGI O2           Irix 6.3             MIPS R10000   175  293.5554  136
+018 Servr 8400 5/300 Digital UNIX V4.0    DEC 21164     300  285.8819  120
+019 SGI Origin 200   Irix 6.4             MIPS R10000   180  269.2637  139
+020 Enterprise 4K/10 Solaris 2.5.1        UltraSPARC    250  249.8144  145
+021 Sun Ultra 2      Solaris 2.5.1        Ultra2-2CPU   300  231.9762  151
+022 SGI Challenge L  Irix 6.0             R8000-01CPU    75  216.9143   83
+023 SGI Challenge L  Irix 6.0             R8000-01CPU    75  216.6914   84
+024 SGI Challenge L  Irix 6.0             R8000-01CPU    75  215.9419   82
+025 Cray Y-MP M94    UNICOS 8.0.4         4 CPU's       166  193.5605  109
+026 SGI Indigo2      Irix 6.2             MIPS R10000   195  186.4373  126
+027 Aspen Alpine     Digital UNIX 3.2c    DEC 21064A    275  179.8925  102
+028 SGI O2           Irix 6.3             MIPS R10000   175  167.3595  136
+029 Convex C3840     -------------------- -----------    60  165.0154   10
+030 HP 9000/J210XC   HP-UX 10.20          PA7200_2CPU   120  138.8816  143
+031 Cray-2S/4128     UNICOS 6.1           -----------   ---  135.9719    9
+032 Cray-2/4256      UNICOS 6.1.6         -----------   ---  135.1160   17
+033 Cray X-MP/EA432  -------------------- -----------   ---  131.8280   10
+034 DEC 2100 4/275   OSF/1 V3.0b          DEC 21064     275  120.8293   89
+035 DEC 3000/900 AXP OSF/1 3.0            DEC 21064     275  120.6607   87
+036 DEC 2100 4/275   OSF/1 V3.0           DEC 21064     275  120.2340   90
+037 HP 9000/735      HP-UX 9.05           PA-RISC7150   125  119.9959   93
+038 DEC 3000/900 AXP OSF/1 3.0            DEC 21064     275  119.0621   86
+039 Sun Ultra 2      Solaris 2.5.1        Ultra2-1CPU   300  116.0690  151
+040 HP 9000/J210     HP-UX 10.01          PA-RISC       120  115.3953  135
+041 PowerPC 7300     BeOS                 604e          200  111.8     150
+042 Dell XPS Pro200n NT 3.51   386 fp opt PentiumPro    200  103.1892  133
+043 Pentium Pro      Windows 95           PentiumPro    200   99.6066  148
+044 DEC 3000/500     Digital UNIX V3.2d   DEC 21064     150   98.9325  110
+045 Enterprise 4K/10 Solaris 2.5.1        UltraSPARC    250   97.4814  145
+046 DEC 3000/500 AXP OpenVMS V1.5         DEC 21064     150   96.0739   52
+047 HP 9000/755      HP-UX 9.03           PA-RISC7100    99   94.7531   69
+048 HP 9000/735      HP-UX 9.01           PA-RISC7100    99   94.2471   73
+049 DEC 3000/500X    VMS 6.1              DEC 21064     200   94.0872   88
+050 DEC 3000/800 AXP OSF/1 V1.3a          DEC 21064     200   91.9532   51
+051 DEC 3000/500X    OSF/1 V1.3-3         DEC 21064     200   91.69     42
+052 HP 9000/755      HP-UX 9.03           PA-RISC7100    99   87.3294   69
+053 HP 9000/735      HP-UX 9.01           PA-RISC7100    99   87.2967   71
+054 DEC 4000/710 AXP OSF/1 V1.3a          DEC 21064     190   87.1686   51
+055 HP 9000/735      HP-UX 9.01           PA-RISC7100    99   86.9254   73
+056 HP 9000/735      HP-UX 9.01           PA-RISC7100    99   86.6667   73
+057 DEC 3000/400 AXP OpenVMS V1.5         DEC 21064     133   86.0266   52
+058 IBM RS/6000 590  AIX 3.2.5            Power2         66   85.3959   72
+059 IBM RS/6000 590  AIX 3.2.5            Power2         66   85.0343   66
+060 Pentium P6-200   Solaris x86 2.5.1    Pentium P6    200   84.7196  130
+061 SGI Onyx         Irix 6.2             MIPS R8000     75   83.9806  140
+062 IBM RS/6000 590  AIX 3.2.5            Power2         66   83.4384   72
+063 IBM RS/6000 590  AIX 3.2.5            Power2         66   82.6216   72
+064 Brett StationATX Linux 2.0.0          Pentium Pro   180   80.6121  141
+065 DEC 3000/600 AXP OSF/1 V1.3a          DEC 21064     175   80.2703   51
+066 IBM RS/6000 370  AIX 3.2.3            Power RISC     62   79.0231   37
+067 SGI Indy         Irix 6.2             MIPS R5000    150   78.5298  139
+068 Pentium P5-166   Windows 95           Pentium       166   74.5711  138
+069 AMD K6           Windows 95           AMD K6        200   71.7595  149
+070 DEC 3000/500 AXP OSF/1 T1.3-3         DEC 21064     150   68.7372   35
+071 DEC 3000/500 AXP OSF/1 T1.3           DEC 21064     150   68.6913   38
+072 DEC 3000/500 AXP OSF/1 V1.3a          DEC 21064     150   68.56     51
+073 DEC 3000/500 AXP OSF/1 V1.3-3         DEC 21064     150   68.5603   42
+074 Dell XPS Pro200n NT 3.51    No opt    PentiumPro    200   67.8551  133
+075 IBM RS/6000 980  -------------------- Power RISC     62   67.7052   14
+076 Mac PowerPC 604  MacOS 7.5.2          PowerPC 604   120   65.4260  103
+077 HP 9000/735      HP-UX 9.01           PA-RISC7100    99   64.4838   47
+078 HP 9000/735      -------------------- PA-RISC7100    99   64.1763    5
+079 Sun Ultra 1      Solaris 2.5          UltraSPARC    167   63.3663   99
+080 IBM RS/6000 570  AIX 3.2.4            Power RISC    ---   63.1123   67
+081 Mac PowerPC 604  MacOS 7.5.3          PowerPC 604   120   62.8943  107
+082 HP 9000/712      HP-UX 9.03           PA-7100LC     100   62.1757  116
+083 Dell Dimension   OS/2 Warp            Pentium P6    200   59.6538  112
+084 DEC 3000/900 AXP OSF/1 3.0            DEC 21064     275   59.6149   86
+085 Dell XPS Pro200n NT 3.51    P5 fp opt PentiumPro    200   59.5928  133
+086 Pentium P5-133   Windows 95           Pentium P5    133   59.4711  129
+087 IBM RS/6000 560  -------------------- Power RISC     50   54.9330    3
+088 Pentium P5-120   Windows 95           Pentium P5    120   53.5589  125
+089 Cray Y-MP EL     -------------------- -----------    33   53.4418   45
+090 IBM RS/6000 550  AIX 3.2.3            Power RISC     42   52.3741   12
+091 Sun Ultra 1      Solaris 2.5          UltraSPARC    143   51.6633   99
+092 SPARCstation 20  Solaris 2.4          HyperSPARC    125   51.3444   98
+093 HP 9000/712      HP-UX 10.20          HP-PA7100LC   100   51.2992  143
+094 HP 9000/887      HP-UX 9.0            PA-RISC7100   ---   49.4565   39
+095 HP 9000/750      HP-UX 9.05           PA-RISC7000    66   48.7446   81
+096 HP 9000/750      HP-UX 9.03           PA-RISC7000    66   48.7038   79
+097 IBM RS/6000 550  AIX 3.2.2            Power RISC     42   46.8997    1
+098 IBM RS/6000 550  -------------------- Power RISC     42   46.8770   11
+099 Sun SPARC 20/712 SunOS 5.4            -----------    75   45.6086   96
+100 Pentium P5-100   Windows 95           Pentium P5    100   44.5464  123
+101 IBM RS/6000 25E  AIX 3.2.5            PPC 601        66   44.4173  144
+102 PowerMac 8100/80 PAIX                 PowerPC 601    80   43.58     75
+103 Pentium P5-133   MS DOS 6.22          Pentium P5    133   41.4579  128
+104 Pentium P5-133   MS DOS 6.22          Pentium P5    133   41.4166  128
+105 SPARCstation 20  Solaris 2.4          HyperSPARC    100   40.9795  101
+106 Cray T3D MC 256  UNICOS MAX 1.3.0.0   DEC 21064     150   38.7399  109
+107 HP 9000/735      HP-UX 9.01           PA-RISC7100    99   38.1952   73
+108 Pentium P5-120   Windows 95           Pebtium P5    120   37.4293  125
+109 HP 9000/712      HP-UX 9.61           PA7100LC       60   37.3453   81
+110 IBM RS/6000 540  AIX 3.2              Power RISC    ---   37.2664   39
+111 IBM RS/6000 250  AIX 3.2.5            PowerPC 601    60   36.6013   72
+112 IBM RS/6000 250  AIX 3.2.5            PowerPC 601    60   36.6013   72
+113 SGI Indy         Irix 6.2             MIPS R5000    150   36.2921  139
+114 ThinkPad 760 C   LINUX 1.3.64         Pentium       120   35.7301  105
+115 HP 9000/712      HP-UX 10.11          PA7100         60   35.3913   97
+116 SGI Challenge S  Irix 6.2             R4400         200   34.7830  137
+117 PowerMac 8100/80 -------------------- PowerPC 601    80   33.6388   70
+118 IBM RS/6000 250  AIX 3.2.5            PowerPC 601    60   33.5832   72
+119 IBM RS/6000 250  AIX 3.2.5            PowerPC 601    60   33.5600   72
+120 Pentium P5-75    MS DOS Windows 95    Pentium        75   33.0571  119
+121 Escom P100       Win95/DOS 386 fp opt Pentium       100   32.9226  133
+122 IBM RS/6000 540  -------------------- Power RISC    ---   32.7485   11
+123 HP 9000/715t     HP-UX 9.05           PA-RISC7100    33   31.8298   81
+124 HP 9000/715t     HP-UX 9.03           PA-RISC7100    33   31.7999   79
+125 IBM RS/6000 550  AIX 3.2.3            Power RISC     42   31.2816   12
+126 Pentium P5-100   Windows 95           Pentium P5    100   31.1244  124
+127 Pentium P5-100   Windows 95           Pentium P5    100   31.1011  123
+128 HP 9000/750      HP-UX 8.07           PA-RISC        66   30.2200   18
+129 HP 9000/730      HP-UX 8.07           PA-RISC        66   30.1855   11
+130 HP 9000/730      -------------------- PA-RISC        66   29.9188    2
+131 HP 9000/750      HP-UX 8.07           PA-RISC        66   29.9065   18
+132 HP 9000/730      HP-UX 9.01           PA-RISC 1.1    66   29.8667   22
+133 Gateway P5-90    DOS 6.2              Pentium        90   29.8452   74
+134 HP 9000/750      HP-UX 8.07           PA-RISC        66   29.5125   18
+135 HP 9000/730      HP-UX 8.07           PA-RISC        66   29.4201   27
+136 SGI Indigo2      Irix 4.0.5H          R4400         150   28.7342   82
+137 SGI Challenge L  Irix 5.2             R4400-1CPU    150   28.5214   82
+138 DEC 3000/500 AXP OSF/1 T1.3           DEC 21064     150   27.5979   38
+139 Sun SS 10/41     SunOS 4.1.3          SuperSPARC     40   27.5471   59
+140 IBM RS/6000 530  AIX 3.1.5            Power RISC     25   27.3942   21
+141 DEC 3000/150     Digital UNIX V3.2d   DEC 21064     150   27.3034  110
+142 Pentium P5-75    SCO UNIX V5.0.0a     Pentium P5     75   27.0005  121
+143 ZEOS  Pentium    MS DOS 6.22          Pentium        90   26.6106   85
+144 ThinkPad 760 C   Debian LINUX 1.3.66  Pentium        90   26.5888  104
+145 Escom P100       Win95/DOS  No opt    Pentium       100   26.1424  133
+146 SGI Indigo2      Irix 4.0.5H          R4400/R4010   150   25.7585   64
+147 SGI Indigo2      Irix 4.0.5H          R4400/R4010   150   25.7380   64
+148 HP 9000/705      HP-UX 9.03           PA-RISC7000    35   25.7244   79
+149 HP 9000/705      HP-UX 9.05           PA-RISC7000    35   25.6496   81
+150 DEC 3000/500 AXP OSF/1 T1.2-2 (R5)    DEC 21064     150   25.6414   25
+151 PowerMac 6100/60 -------------------- PowerPC 601    60   25.0962   70
+152 Gateway Pentium  MS DOS 6.22          Pentium        90   24.5242   85
+153 DATEL Pentium    MS DOS 6.22          Pentium        90   24.4500   85
+154 PowerMac 6100/60 System 7.5           PowerPC 601    60   23.8689   92
+155 AMD5K86-P90      Windows 95           AMD5K86-P90    90   23.7947  134
+156 SPARC 20/612     Solaris 2.3          SuperSPARC     60   23.3035   77
+157 Pentium P5-75    MS DOS Windows 95    Pentium P5     75   23.2328  118
+158 Gateway Pentium  LINUX 1.1.35         Pentium        90   23.1001   78
+159 HP 9000/720      HP-UX 9.01           PA-RISC        50   22.7571   46
+160 HP 9000/720      HP-UX 8.07           PA-RISC        50   22.7518   30
+161 ThinkPad 760 C   Debian LINUX 1.3.66  Pentium        90   22.6685  104
+162 SPARCsystem20/61 SunOS 5.3            SuperSPARC     60   22.3893   80
+163 HP 9000/720      HP-UX 8.0.5          PA-RISC        50   22.3005   28
+164 SPARCstation 5   SunOS Release 5.5    uSPARC II     110   21.1929  127
+165 Pentium P5-90    FreeBSD 2.1.0        Pentium P5     90   20.8894  113
+166 SGI Indy         Irix 5.3             R4600SC       133   20.6496   98
+167 MIPS R4000       -------------------- R4000/R4010   100   20.0620   44
+168 SGI Indy PC      Irix 5.1.1           R4000/R4010   100   18.8861   60
+169 SPARCsystem 10   SunOS 5.2            SuperSPARC    ---   18.8564   58
+170 SGI Indigo       Irix 4.0.5           R4000/R4010   100   18.8534   61
+171 SGI Indigo2      Irix 4.0.5           R4000/R4010   100   18.7267   61
+172 SGI Indy PC      Irix 5.1.1           R4000/R4010   100   18.4706   61
+173 AMD5K86-P90      Windows 95           AMD5K86-P90    90   18.2094  134
+174 SGI Crimson      Irix 4.0.5           R4000/R4010   100   18.3168   61
+175 IBM RS/6000 950  AIX 3.2.1            Power RISC    ---   17.4895   17
+176 SGI Iris RPC50   -------------------- R4000/R4010   100   16.9839    9
+177 ALR Evolution V1 OS/2 2.1             Pentium        60   16.7068   53
+178 Sun SS 2 (80)    SunOS 4.1.2          Weitek         80   16.5417   57
+179 3050R/sv         HI-UX/WE2 V1.02      PA-RISC1.0    ---   15.9126   16
+180 Sun SS 10/41     SunOS 4.1.3          SuperSPARC     40   15.8020   59
+181 HP 9000/705      HP-UX 8.07           PA-RISC        35   15.7847   27
+182 M-680H           HI-UX/M (VM)         -----------   ---   15.7690   16
+183 ALR Pentium/60   MS DOS 5.0           Pentium        60   15.74     43
+184 Sun SS 10/41     SunOS 4.1.3          SuperSPARC     40   15.1320   59
+185 PC Compatible    Linux 2.0.0          AMD K5         75   14.8148  117
+186 SPARCstation 5   SunOS Release 5.5    uSPARC II     110   14.6225  127
+187 Sun SS 10/41     SunOS 4.1.3          SuperSPARC     40   14.5833   59
+188 Sun SS 10/41     SunOS 4.1.3          SuperSPARC     40   14.4359   59
+189 Sun SS 10/30     SunOS 4.1.3          SuperSPARC     36   14.2299   24
+190 Sun SS 10/30     SunOS 4.1.3          SuperSPARC     36   14.2174    9
+191 Dell Dimension   Linux 1.2.1          Pentium        60   14.1085  111
+192 PRIME EXL7680    RISCOS 4.52          -----------   ---   13.2653   39
+193 IBM RS/6000 25E  AIX 3.2.5            PPC601         66   12.8372  144
+194 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33   12.4031   15
+195 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33   11.9491   15
+196 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33   11.9462   15
+197 VAXstation 4000  VMS 6.1              -----------   ---   11.6545   88
+198 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33   11.1094   15
+199 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33   11.1069   15
+200 Dell Dimension   Windows 95 (32-bit)  Pentium        60   11.0655  111
+201 Sun SS 2 (50)    SunOS 4.1.3          SPARC          50   10.5523   59
+202 IBM RS/6000 320H AIX 3.2.2            Power RISC    ---   10.4358   17
+203 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33   10.2694   15
+204 Sharp PC-3060    -------------------- Cyrix 5x86    100   10.2564  106
+205 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33    9.7339   15
+206 AMD 5x86-133     FreeBSD 2.1R         AMD 5x86      133    9.7001  114
+207 DEC DS 5000/133  Ultrix 4.3           R3000/R3010    33    9.6926   23
+208 AMD 5x86-133     NextStep 3.3         AMD 5x86      133    9.6702  115
+209 Sun SS 10/20     SunOS 4.1.3          SuperSPARC     33    9.3978   15
+210 SPARCserver 690  SunOS 4.1.2          SPARC          40    9.2798    1
+211 AMD 5x86-133     MS DOS 6.22          Am5x86-P75    133    9.1377  132
+212 SGI Iris Indigo  -------------------- R3000/R3010    33    9.1343   11
+213 SGI 4D/35        Irix 4.0.5           R3000/R3010    36    9.0356    7
+214 SGI 4D/35        Irix 4.0.5           R3000/R3010    36    9.0255    7
+215 SPARCstation 670 SunOS 4.1.3          SPARC          40    8.6936   63
+216 SGI 4D/35        Irix 4.0.5           R3000/R3010    36    8.5526    7
+217 MIPS R3000       -------------------- R3000/R3010    33    8.3152   44
+218 DEC DS 5000/133  Ultrix 4.3           R3000/R3010    33    8.3076   23
+219 SGI Iris Indigo  -------------------- R3000/R3010    33    8.2745    9
+220 SGI 4D/RPC       Irix 4.0.5           R3000/R3010    33    8.1372   28
+221 Sun 670MP        SunOS 4.1.2          SPARC          40    8.1159   39
+222 Sun SS 2 (40)    SunOS 4.1.2          SPARC          40    8.0692    1
+223 Sun SS 2 (40)    SunOS 4.1.2          SPARC          40    8.0053    9
+224 Sun SS 2 (40)    SunOS 4.1.3          SPARC          40    7.8036   59
+225 Interpro 2430    System V R3.1        -----------   ---    7.3909   50
+226 DEC 5000/200     Ultrix 4.4           R3000/R3010   ---    7.3543   94
+227 Sun SS 2 (40)    SunOS 4.1.2          SPARC          40    7.2968    1
+228 Sun IPX          SunOS 4.1.3          SPARC          40    7.1191   65
+229 Sun IPX          SunOS 4.1.3          SPARC          40    7.0983   65
+230 AMD 486DX4/100   Windows 95           AMD 486DX4    100    7.0686  123
+231 486DX4/100       Windows 95           80486DX4      100    7.0652  123
+232 486DX4/100       Windows 95           80486DX4      100    7.0481  123
+233 Sun 4/470        SunOS 4.1.2          SPARC         ---    7.0135    9
+234 SPARCstation IPX SunOS 4.1.3          SPARC          40    7.0108   56
+235 486DX4/100       Linux 1.2.10         80486DX4      100    6.7936  100
+236 Sun IPX          SunOS 4.1.3          SPARC          40    6.5426   28
+237 Sun IPX          SunOS 4.1.3          SPARC          40    6.4809   65
+238 SGI 4D/35        Irix 4.0.5           R3000/R3010    36    6.0992    7
+239 Interpro 2430    System V R3.1        -----------   ---    5.7512   50
+240 SPARCserver 690  SunOS 4.1.2          SPARC          40    5.4288    1
+241 SGI 4D/RPC       Irix 4.0.5           R3000/R3010    33    5.3885   28
+242 Sun 4/670        SunOS 4.1.2          SPARC         ---    5.3771   17
+243 SPARCserver 470  SunOS 4.1.2          SPARC         ---    5.1896    9
+244 Sun SS 2 (40)    SunOS 4.1.2          SPARC          40    5.1507    1
+245 Escom 486        Win95/DOS 386 fp opt 80486DX2       66    5.1365  133
+246 SPARCserver 330  SunOS 4.1.2          SPARC          25    5.1013    9
+247 486DX2/72        Linux/PRO 0.99.15    80486DX2       72    5.0311   68
+248 LIJN 486DX2/66   Linux 0.99pl6        80486DX2       66    4.9216   34
+249 486DX2/66        FreeBSD 2.1.0        80486DX2       66    4.8190  113
+250 Sun 4/330        SunOS 4.1.1          SPARC          25    4.7810    1
+251 486DX2 ISA/VLB   OS/2 2.1             80486DX2       66    4.7224   49
+252 ISA/VLB AT Clone MS DOS 6.0           80486DX2       66    4.6805   48
+253 AMI 486DX2/66    MS DOS 5.0, EISA     80486DX2       66    4.6679   19
+254 AMI 486DX2/66    MS DOS 5.0, EISA     80486DX2       66    4.6655   19
+255 Escom 486        Win95/DOS  No opt    80486DX2       66    4.6500  133
+256 Sun IPX          SunOS 4.1.3          SPARC          40    4.6117   65
+257 486DX2/66 EISA   IBM OS/2 2.0         80486DX2       66    4.4613   36
+258 486DX2/66        SCO UNIX 3.2.2       80486DX2       66    4.3645   32
+259 Acorn A5000      RiscOS               ARM3+FPA10     33    4.2633  131
+260 AMI 486DX2/66    MS DOS 5.0, EISA     80486DX2       66    4.0885   19
+261 NeXTstation/33   Mach 3.0             68040          33    4.0615   28
+262 MAC Quadra 800   -------------------- 68040          33    4.0572   40
+263 SPARCstation 1+  SunOS 4.1.2          SPARC          25    3.4166    1
+264 Insight 486DX/50 IBM OS/2 2.1         80486DX        50    3.2070   41
+265 Amiga 4000/25    -------------------- 68040          25    3.1942    8
+266 SGI 4D/20        Irix3.2              R2000          12    3.1477   28
+267 Mac Centris 650  System Z1-7.1        68040          25    3.0507   76
+268 Sun 4/330        SunOS 4.1.1          SPARC          25    3.0011    1
+269 HP 9000/425      -------------------- 68040          25    2.9753  104
+270 Pal Legend       -------------------- 80486DX        50    2.9748   26
+271 NeXT             -------------------- 68040          25    2.9000  104
+272 HP 9000/385      -------------------- 68040          25    2.8976    6
+273 HP 9000/425      -------------------- 68040          25    2.8652  104
+274 NeXTstation/25   NeXTStep 3.0         68040          25    2.8363    6
+275 3050             HI-UX/WE             68040          25    2.8176   16
+276 OPUS 5120, SS 1+ SunOS 4.1.2          SPARC 7        25    2.7215   55
+277 OPUS 5120, SS 1+ SunOS 4.1.2          SPARC 7        25    2.7189   55
+278 OPUS 5120, SS 1+ SunOS 4.1.2          SPARC 7        25    2.7103   55
+279 OPUS 5120, SS 1+ SunOS 4.1.2          SPARC 7        25    2.7093   55
+280 ETEQ 486DX/33    Linux 0.99pl2-47     80486DX        33    2.4874    4
+281 AMI 486DX/33     Linux 0.99pl2        80486DX        33    2.4748   31
+282 CLUB Falcon 433  MS DOS 5.0, ISA      80486DX        33    2.3330   19
+283 CLUB Falcon 433  MS DOS 5.0, ISA      80486DX        33    2.3318   19
+284 Vega 486DX/33    MS DOS 5.0, ISA      80486DX        33    2.3295    1
+285 Vega 486DX/33    MS DOS 5.0, ISA      80486DX        33    2.3289   19
+286 Vega 486DX/33    MS DOS 5.0, ISA      80486DX        33    2.3280   19
+287 SPARCstation 1+  SunOS 4.1.2          SPARC          25    2.3064    1
+288 Vega 486DX/33    MS DOS 5.0, ISA      80486DX        33    2.1643   63
+289 Vega 486DX/33    MS DOS 5.0, ISA      80486DX        33    2.1521   19
+290 486DX/50 EISA    386BSD UNIX 0.1      80486DX        50    1.9921   13
+291 CLUB Falcon 433  MS DOS 5.0, ISA      80486DX        33    1.9876   19
+292 Sun 4/280        SunOS 4.1.2          MB86900        16    1.6422   29
+293 VAX 8650         4.3 BSD              -----------    18    1.5994    1
+294 M88100           -------------------- M88100        ---    1.5733   18
+295 Sun 3/280        SunOS 4.1.1          68020/fpa      25    1.4677   28
+296 Sun 4/280        SunOS 4.1.2          MB86900        16    1.4607   29
+297 Clone 386        Win95/DOS 386 fp opt AM80386DX      40    1.3692  133
+298 Clone 386        Win95/DOS  No opt    AM80386DX      40    0.9270  133
+299 Acorn RiscPC 610 RiscOS 3.7           SA-110        202    0.8716  146
+300 HP 9000/345      HP-UX 9.0            68030/68882    50    0.8468   33
+301 HP 9000/345      -------------------- 68030/68882    50    0.8315    6
+302 386/387          386BSD UNIX 0.1      80386/80387    40    0.7407   13
+303 Amiga 2000/MMR   AmigaOS 1.3          68030/68882    33    0.5692    1
+304 Amiga 2K/G-Force NetBSD 0.9a          68030/68882    25    0.4231   62
+305 NeXT Cube        OS Version 3.3       68030/68882    25    0.4107   91
+306 Atari Falcon     TOS 4.04             68030/68882    20    0.3545   95
+307 Atari Falcon     Linux 1.2.8          68030/68882    20    0.3246   95
+308 Atari Mega ST 4  MiNT 1.04 / TOS 1.04 68030/68881    25    0.2862   55
+309 Sun 3/280        SunOS 4.1.1          68020/68881    25    0.2555   28
+310 Sun 3/60         SunOS 3.4            68020/68881    20    0.1693   28
+311 Sharp X68000 XVI Human68k V2.03       68000/68881    16    0.1304   54
+312 Sun 3/280        SunOS 4.1.1          68020/-----    25    0.0274   28
+313 Sun 3/80         SunOS 4.0.3          68020/-----    25    0.0261   17
+314 IBM Value Point  MS DOS 5.0           486SX/-----    25    0.0255   32
+315 386DX-40         MS DOS 5.0           386DX/-----    40    0.0234   32
+316 Sun 3/50         SunOS 4.1.3          68020/-----    15    0.0140   17
+317 386DX-40         OS/2 1.3             386DX/-----    40    0.0104   32
+318 Sharp X68000 XVI Human68k V2.03       68000/-----    16    0.0099   54
+319 386SX-25         SCO UNIX 3.2.2       386SX/-----    25    0.0068   32
+320 IBM PS/2 Model55 MS DOS 5.0           386SX/-----    16    0.0064   32
+---
+###
+001 2048 MByte RAM, 1:4 interleaving RAM, cc 3.10.1, cc -G8 -TENV:PIC
+    -m1 -OPT:IEEE_arithmetic=3 -OPT:roundoff=3 -OPT:unroll_times_max=4
+    -SWP:unroll_times_max=4 -O3 -TARG:abi=64:isa=mips4
+002 3072 MByte RAM, 1:4 interleaving RAM, cc 3.10.1
+003 ---
+004 MIPSPRO v7.1.1, cc -O3 -64 -DUNIX, 1GB RAM, 1MB cache
+    NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
+005 MIPS R8000, 16+16KB Internal & 4 MB External cache, 128 MB RAM,
+    MIPSPRO V6.0, cc -OPT:IEEE_arithmetic=3 -OPT:roundoff=3
+    -OPT:unroll_times_max=4 -SWP:unroll_times_max=4 -pca -Wk,-r=3,
+    -so=0,-arl=4,-o=5 -O3 -mips4, #pragma serial added in Module 2.
+006 cc -DUNIX -O5 -migrate -non_shared -tune ev5 -unroll 8, 1GB RAM
+007 UNICOS 7.0, Cray Standard C Release 3.0.4.2 XMP/YMP Version,
+    C Front-end Version 060-022, CMCS Back-end Version 501, one
+    processor, cc -O3
+008 cc -O3
+009 Fujitsu VP2200/10, 512 MB main memory, 1 scalar + 1 vector unit
+    (3.2 ns clock speed), Compiler C/VP V11L10, Compiler options:
+    vcc -Bstatic -Wv,-p2200 -DUXPM -o flops flops.c
+010 Sun C 4.2, acc -DUNIX -fast -O4 -depend -xchip=ultra -xarch=v8plusa
+011 Digital Unix V4.0, cc -DUNIX -O5 -non_shared -tune ev5 -unroll 8
+012 ---
+013 IRIX C Compiler, 64-bit, cc -DUNIX -O -64 -r10000 
+    NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
+014 cc -O5 -tune ev5 -migrate -unroll 8 -assume noacc, 128MB RAM
+015 MIPSPRO v7.1.1, cc -O3 -64 -DUNIX, 1GB RAM, 1MB cache
+    NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
+016 Sun C 4.2, acc -DUNIX -fast -O4 -depend -xchip=ultra -xarch=v8plusa
+    System State: Multi-user with windows, mailer, network on, but only
+    this benchmark actively executing. 512KB external cache.
+017 IRIX C 6.2, 32-bit, 1MB cache, cc -O -n32 -DUNIX
+    NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
+018 cc -non_shared -DUNIX -O5
+019 SGI IRIX C Compiler 7.1, cc -O -64 -DUNIX, 1MB Cache, 128MB RAM
+    Note: The R10000 is a 64-bit CPU with 64-bit OS and compiler
+020 Sun C 4.0, cc -fast -xO5 -xtarget=native -DUNIX
+021 GNU C 2.7.2, gcc -O2 -mv8 -DUNIX, 1MB Cache, 128MB RAM
+    Note: GCC can not yet take advantage of the SPARC v9 instruction set.
+022 cc 3.10.1, cc -O3
+023 512 MByte RAM, 1:2 interleaving RAM, cc 3.10.1
+024 MIPS R8000, 16+16KB Internal & 4 MB External cache, 128 MB RAM,
+    MIPSPRO V6.0, cc -OPT:IEEE_arithmetic=3 -OPT:roundoff=3
+    -OPT:unroll_times_max=4 -SWP:unroll_times_max=4 -O3 -mips4
+025 Cray Y-MP M94/4512, 4 CPU's at 166 MHz, Cray Standard C V4.0.2.11
+    cc -O3 -DFORTRAN_SEC
+026 IRIX C Compiler, 32-bit, cc -DUNIX -O 
+    NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
+027 8KB+8KB+2MB writeback cache and 128MB RAM.
+    cc -DUNIX -O4 -migrate -non_shared
+028 IRIX C 6.2, 32-bit, cc -O -32 -DUNIX
+    NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
+029 cc -DUNIX -O3
+030 HP92453-01 A.10.32.10 HP C Compiler,
+    cc -DUNIX -Ae +Oall +DAJ210XC +DSJ210XC +Oparallel -Wl,aarchive
+031 Cray Standard C Release 3.0.4.2 CRAY2 Version, C Front-end Version
+    060, CMCS Back-end Version 501, one processor, cc -O3
+032 ---
+033 cc -DCTimer -h aggress -h align -h fastaddr -h inline3 -h scalar3
+       -h task3 -h vector3 -O3
+034 Single CPU version of DEC 2100 4/275, cc -DUNIX -O4 -migrate
+035 DECchip 21064, 8KB+8KB+2MB writeback cache and 320 MB main memory.
+    DEC OSF/1 AXP Compiler Driver 3.11,
+    cc -DUNIX -O4 -migrate -non_shared -D_INTRINSICS -D_INLINE_INTRINSICS
+       -D_FASTMATH -float -fp_reorder
+036 Single CPU version of DEC 2100 4/275, cc -DUNIX -O4 -migrate
+    -non_shared
+037 HP C 9.70, cc -DUNIX -O
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+038 DECchip 21064, 8KB+8KB+2MB writeback cache and 320 MB main memory.
+    DEC OSF/1 AXP Compiler Driver 3.11,
+    cc -DUNIX -O4 -migrate -non_shared
+039 GNU C 2.7.2, gcc -O2 -mv8 -DUNIX, 1MB Cache, 128MB RAM
+    Note: GCC can not yet take advantage of the SPARC v9 instruction set.
+040 HP-UX C compiler, cc -O -DUNIX
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+041 512KB L2 cache, 64MB RAM, Metrowerks C/C++, cc -O full
+042 Watcom C/C++ 10.5 Win32NT -otexan -fp3 (386 fp) -zp8 -5r -dMSC
+    66MHz external, 256 KB cache, 440FX PCIset, 32 MB EDO RAM
+    Similar MFLOPS via Dos4GW compile and NT/DOS
+043 Intel motherboard VS440FX ATX, 32 MB RAM (60ns fast page),
+    Borland C++ V5, bcc32i -DBORLAND_C -O2IM -5
+044 GEM C, cc -DUNIX -O5 -migrate -std1
+045 gcc 2.7.2.1, gcc -O3 -funroll-loops -DUNIX
+    NOTE: -fexpensive-optimizations -fdelayed-branch -ffast-math showed
+    effects way below 1/1000.
+046 CC/STANDARD=VAXC
+047 HP C 9.61, cc -DUNIX +O2 +Ofastaccess
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+048 HP C 9.65, cc -DUNIX +O2
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+049 CC /DEF=VMS /STAN=VAXC
+050 2 MB Cache, cc -DUNIX -migrate -O4
+051 cc -DUNIX -O4 -non_shared -migrate
+052 HP C 9.61, cc -DUNIX +O3
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+053 HP C 9.65, cc -DUNIX +O4 +Oall
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+054 4 MB Cache, cc -DUNIX -migrate -O4
+055 HP C 9.65, cc -DUNIX +O3
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+056 HP C 9.65, cc -DUNIX +O4 +Oall
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+057 CC/STANDARD=VAXC
+058 xlc 1.3, cc -DUNIX -O
+059 xlc 1.3.0.0, cc -DUNIX -O3
+060 gcc 2.7.2, gcc -DUNIX -O3
+061 SGI Irix C Compiler 6.2, cc -O -r8000 -DUNIX, 4MB Cache, 320MB RAM
+    Note: The R8000 is a 64-bit CPU with 64-bit OS and compiler
+062 xlc 1.3, cc -DUNIX -O3 -Q -qarch=PWR2 -qtune=PWR2
+063 xlc 1.3, cc -DUNIX -O3 -Q
+064 VS440FX Motherboard, 256KB Cache, 80MB RAM, gcc 2.7.2,
+    gcc -DUNIX -O3 -funroll-loops -malign-double -fmove-all-movables
+        -freduce-all-givs -frerun-loop-opt
+065 2 MB Cache, cc -DUNIX -migrate -O4
+066 cc -DUNIX -O
+067 SGI C IRIX 7.0, cc -O -n32 -DUNIX, 512KB cache, 64MB RAM
+068 430VX Chipset, 32 MB RAM, 256 KB Pipelined Burst SRAM Cache,
+    Borland C++ V5, bcc32i -DBORLAND_C -O2M -5
+069 SOYO 5BT5 motherboard, chipset 82430TX, 512KB pipelined burst SRAM
+    cache, 32MB EDO DRAM (60 ns). gcc 2.5.7, gcc -DUNIX -m486 -O2
+    -fomit-frame-pointer -funroll-loops
+070 GEM C, cc -DUNIX -O4
+071 cc -DUNIX -migrate -O4
+072 cc -DUNIX -migarte -O4
+073 cc -DUNIX -O4 -non_shared -migrate
+074 Watcom C/C++ 10.5 Win32NT No optimization -dMSC
+    66MHz external, 256 KB cache, 440FX PCIset, 32 MB EDO RAM
+    Similar MFLOPS via Dos4GW compile and NT/DOS
+075 cc -DUNIX -DROPT -O -Q
+076 Metrowerks 7 environment, std 1.3 libs, C compiler 1.3.2, 16MB RAM,
+    256KB L2 cache, PowerPC 604 scheduling, global optimization 2
+077 cc -DUNIX +O3 -J +P -Wl,-a,archive
+078 cc -DUNIX +O3 -Wl,-a,archive
+079 gcc 2.6.0, gcc -O2 -msupersparc -DUNIX_Old
+080 cc -DUNIX -O -Q
+081 Metrowerks Codewarrior 8
+082 cc -DUNIX -O -Wl,-aarchive
+083 Watcom C 10.5, wcl386 /w4 /bt=OS2V2 /l=OS2V2 /cc /k8192 /oneatx
+    /zp8 /sr /fpi87 /fp5, 32MB ECC RAM, 2-way interleave enabled,
+    Intel Aurora, Rev B0 Orion Chipset
+084 DECchip 21064, 8KB+8KB+2MB writeback cache and 320 MB main memory.
+    gcc 2.6.3, gcc -DUNIX -O9
+085 Watcom C/C++ 10.5 Win32NT -otexan -fp5 (p5 fp) -zp8 -5r -dMSC
+    66MHz external, 256 KB cache, 440FX PCIset, 32 MB EDO RAM
+086 MB-8500TVX motherboard, 82437VX chipset, 256KB Pipelined Burst SRAM
+    cache, 64MB EDO 60ns DRAM, Borland C++ V5,
+    bcc32i -DBORLAND_C -O2IM -5
+087 cc -DUNIX -O -Q
+088 MB-8500TVX motherboard, 82437VX chipset, 256 KB L2 burst SRAM cache,
+    32 MB Fast Page 70 ns DRAM, Borland C++ V5,
+    bcci32 -DBORLAND_C -O2IM -5
+089 cc -DUNIX -O3
+090 cc -DUNIX -O
+091 gcc 2.6.0, gcc -O2 -msupersparc -DUNIX_Old
+092 gcc 2.6.0, gcc -O2 -msupersparc -DUNIX_Old
+093 HP92453-01 A.10.32.10 HP C Compiler,
+    cc -DUNIX -Ae +Oall +DA712 +DS712 -Wl,aarchive
+094 cc -DUNIX -O
+095 HP C 9.61, cc -DUNIX -O
+096 HP C 9.61, cc -DUNIX -O
+097 cc -DUNIX -O -Q
+098 cc -DUNIX -O
+099 C 4.0 beta, cc -fast -xO5 -xunroll=4
+100 Intel MARL motherboard, Chipset 82430HX, 256KB Pipeline Burst SRAM,
+    32MB 60ns Fast Page DRAM, Borland C++ V5, bcc32i -DBORLAND_C -O2IM -5
+101 xlc 1.2.1, cc -DUNIX -O3 -qstrict -qinlglue -Q,------------;
+102 xlc 1.02, xlc -O3 -Q
+103 MB-8500TVX motherboard, 82437VX chipset, 256KB Pipelined Burst SRAM
+    cache, 16MB Fast Page DRAM, L2 cache enabled, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+104 MB-8500TVX motherboard, 82437VX chipset, 256KB Pipelined Burst SRAM
+    cache, 16MB Fast Page DRAM, L2 cache disabled, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+105 gcc 2.7.1, gcc -DMSC -msupersparc -O3
+106 Cray Standard C V4.0.2.11, cc -O3 -DCTimer -T cray-t3d
+107 HP C 9.65, cc -DUNIX +O1
+    * CAUTION: HP's new compiler appears to break the MFLOPS(1) code.
+               MFLOPS(1) rating is unreliable in this case.
+108 MB-8500TVX motherboard, 82437VX chipset, 256 KB L2 burst SRAM cache,
+    32 MB Fast Page 70 ns DRAM, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+109 HP C 9.61, cc -DUNIX -O
+110 xlc -DUNIX -O
+111 xlc 1.3, cc -DUNIX -O3 -Q
+112 xlc 1.3, cc -DUNIX -O
+113 SGI IRIX C Compiler 7.0, cc -O -DUNIX, 512KB Cache, 64MB RAM
+114 gcc 2.7.2, gcc -DUNIX -O2 -fomit-frame-pointer -m486 -malign-double,
+    40MB RAM, 256KB external cache, 6.5 lbs.
+115 HP92435-01 A.10.11 HP C Compiler, cc +O4 +Oall
+116 IRIX C 7.0, 1MB cache, 128MB RAM, cc -O -DUNIX
+117 Metrowerks C, Pre-Release Version DR/2
+118 xlc 1.3, cc -DUNIX -O3 -Q -qarch=PWR -qtune=601
+119 xlc 1.3, cc -DUNIX -O3 -Q -qarch=PPC -qtune=601
+120 Borland C++ V5, bcc32i -DBORLAND_C -O2MI -5, Intel ZAPPA motherboard,
+    chipset 82437FX, 256KB asynchronous cache, 32MB Fast Page RAM.
+121 Watcom C/C++ 10.5 Dos4GW -otexan -fp3 -zp8 -5r -dMSC
+    256 KB cache Neptune chipset 16 MB RAM
+122 cc -DUNIX -O
+123 HP C 9.61, cc -DUNIX -O
+124 HP C 9.61, cc -DUNIX -O
+125 cc -DUNIX -O -qfloat=nomaf
+126 MB-8500TVX motherboard, 82437VX chipset, 256 KB L2 burst SRAM cache,
+    16 MB Fast Page 60 ns DRAM, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+127 Intel MARL motherboard, Chipset 82430HX, 256KB Pipeline Burst SRAM,
+    32MB 60ns fast page DRAM,
+    gcc 2.5.7, gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+128 cc -DUNIX -DHPUNX -O3
+129 cc -DUNIX +O3
+130 cc -DUNIX +OS +O3 -Wl,-a,archive
+131 cc -DUNIX -DHPUNX -O
+132 cc -DUNIX +O3
+133 Watcom C32 V9.5 /oneatx /zp4 /5r
+134 cc -DUNIX -DHPUNX -OS
+135 cc -DUNIX +O3 -Wl,-a,archive
+136 MIPS R4400, 16+16KB Internal & 1 MB External cache, 64 MB RAM,
+    Extreme Graphics, cc 3.10.1: -O2 -sopt,-inline -mips2
+137 MIPS R4400, 16+16KB Internal & 1 MB External cache, 64 MB RAM,
+    cc V3.18, cc 3.10.1: -O2 -sopt,-inline -mips2
+138 cc -DUNIX -O3
+139 venus.nosc.mil, Apogee AC2.2, apcc -DUNIX -O5 -Xkap -cg92
+140 cc -DUNIX -O
+141 ACC C, cc -DUNIX -O4 -std1
+142 SCO UNIX Release 5.0.0a, cc -DUNIX_Old -O3 -Kpentium, chipset 82437FX,
+    ZAPPA motherboard, 256KB asynchronous cache, 32MB Fast Page RAM.
+143 gcc 2.5.4, gcc -DUNIX -O2
+144 gcc 2.6.3, gcc -DUNIX -DROPT -O4 -v -pipe -s -fomit-frame-pointer
+    (no X running)
+145 Watcom C/C++ 10.5 Dos4GW No optimization -dMSC
+    256 KB cache Neptune chipset 16 MB RAM
+146 cc 3.10.1, cc -DUNIX -O3 -mips2
+147 cc 3.10.1, cc -DUNIX -DROPT -O3 -mips2
+148 HP C 9.61, cc -DUNIX -O
+149 HP C 9.61, cc -DUNIX -O
+150 cc -DUNIX -O3
+151 Metrowerks C, Pre-Release Version DR/2
+152 gcc 2.5.4, gcc -DUNIX -O2
+153 gcc 2.5.4, gcc -DUNIX -O2
+154 Metrowerks CodeWarrior 5, Settings: defaults, optimize for speed.
+155 MB-8500TVC motherboard, 82439HX chipset, 512KB Pipelined Burst SRAM
+    cache, 32MB EDO 60ns DRAM, Borland C++ Version 5 (bcc32i),
+    bcc32i -DBORLAND_C -O2IM -5
+156 gcc 2.5.8, gcc -DUNIX_Old -O2
+157 gcc 2.5.7, gcc -DUNIX -m486 -O2 -fomit-frame-pointer -funroll-loops,
+    Intel ZAPPA motherboard, chipset 82437FX, 256KB asynchronous cache,
+    32MB Fast Page RAM.
+158 gcc 2.6.0, gcc -O2 -fexpensive-optimizations
+159 cc -DUNIX +P +O3 -J -Wl,-a,archive
+160 cc -DUNIX -DHPUNX -O
+161 gcc 2.6.3, gcc -DUNIX -DROPT -O4 -v -pipe -s
+162 SPARCompilers 2.0.1, 03 Sep 1992, cc -fast -x03
+163 cc -DUNIX +OS +O3
+164 cc -DUNIX -fast -O
+165 gcc 2.6.3, gcc -DUNIX -O2, 16MB RAM, 256KB external L2 cahce
+166 MIPS Pro C Compiler, cc -DUNIX
+167 cc -DUNIX -O3
+168 cc 3.17, cc -DUNIX -mips2 -sopt-so=4 -O3 -non_shared,
+    8 KByte I/D caches, NO external cache.
+169 Sun C 2.0.1 (03 Sep 1992), cc -fast -DUNIX -I/usr/ucbinclude
+    -L/usr/ucblib -lucb -lelf -R/usr/ucblib
+170 cc 3.10.1, cc -DUNIX -O2 -mips2 -sopt,-inline, 8 KByte I/D caches,
+    1 MByte external (secondary) cache.
+171 cc 3.10.1, cc -DUNIX -O2 -mips2 -sopt,-inline, 8 KByte I/D caches,
+    1 MByte external (secondary) cache.
+172 cc 3.17,   cc -DUNIX -O2 -mips2 -sopt,-inline, 8 KByte I/D caches,
+    NO external cache.
+173 MB-8500TVC motherboard, 82439HX chipset, 512KB Pipelined Burst SRAM
+    cache, 32MB EDO 60ns DRAM, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+174 cc 3.10.1, cc -DUNIX -O2 -mips2 -sopt,-inline, 8 KByte I/D caches,
+    1 MByte external (secondary) cache.
+175 ---
+176 cc -DUNIX -O3
+177 Borland C++ V1.0, 256K Cache, 16 MB 80 ns DRAM
+178 ariel.nosc.mil, Sun C 2.0.1, cc -DUNIX -O4 -fsingle -dalign -fnonstd
+    -libmil -cg89, Weitek CPU runs at 2 times SPARCstation 2 bus speed
+    (40 MHz).
+179 cc -DUNIX -Dhpux -O
+180 venus.nosc.mil, Sun C 2.0.1, acc -DUNIX -fast -O4
+181 cc -DUNIX +O3 -Wl,-a,archive
+182 cc -DUNIX_Old -O
+183 Metaware High C with '-pentium' and '-O4' options, 8 MB 64-bit RAM
+184 marlin.nosc.mil, gcc 2.2.2, gcc -DUNIX -O2
+185 gcc 2.7.2, gcc -DUNIX -O2, Intel Triton PCI motherboard, 8 MB RAM,
+    256 KB Pipeline cache
+186 cc -DUNIX
+187 marlin.nosc.mil, /bin/cc, cc -DUNIX -O4
+188 venus.nosc.mil,  /bin/cc, cc -DUNIX -O4
+189 Sun C 1.0, cc -DUNIX -fast -O4
+190 Sun C 1.0, cc -DUNIX -fast -O4
+191 8MB RAM, gcc ?.?.?, gcc -DUNIX -O
+192 cc 2.11, cc -DUNIX -O -systype bsd43
+193 xlc 1.2.1, cc -DUNIX
+194 gcc 2.2.2, gcc -DUNIX -O2
+195 cc -DUNIX -O4
+196 cc -DUNIX -O3
+197 VAXstation 4000-90, CC /DEF=VMS
+198 cc -DUNIX -O
+199 cc -DUNIX -O2
+200 Borland C/C++ 4.52
+201 metis.nosc.mil, Sun C 2.0.1, acc -DUNIX -O4 -fsingle -dalign -fnonstd
+    -libmil -cg89, original 40 MHz motherboard replaced with 50 MHz
+    motherboard.
+202 ---
+203 gcc 2.2.2, gcc -DUNIX -O
+204 gcc 2.6.3, gcc -DGTODay -O2, 8MB RAM
+205 gcc 2.2.2, gcc -DUNIX
+206 gcc 2.6.3, gcc -DUNIX -O2 -m486, Biostar MB-8433UUD Mother board
+207 gcc 2.3.3, gcc -DUNIX -O2 -fexpensive-optimizations -fstrength-reduce
+                   -fomit-frame-pointer
+208 gcc 2.5.8, gcc -DUNIX -DROPT, EISA, 64KB L2 cache, 32MB RAM
+209 cc -DUNIX
+210 Sun C 1.0, cc -DUNIX -fast -O4
+211 gcc 2.7.2, gcc -DUNIX -O3, 256KB L2 cache, 16MB DRAM (70ns)
+212 gcc 2.3.3, gcc -DUNIX -O2 -funroll-loops -fomit-frame-pointer
+213 cc -DUNIX -O3
+214 cc -DUNIX -O2
+215 athens.nosc.mil, /bin/cc, cc -DUNIX -O4 flops.c -o flops
+216 cc -DUNIX -O1
+217 cc -DUNIX -O3
+218 cc -DUNIX -O4
+219 cc -DUNIX -O3
+220 cc -DUNIX -O3
+221 cc -DUNIX -O -target sun4
+222 Sun C 1.0, cc -DUNIX -fast -O4
+223 Sun C 1.0, cc -DUNIX -fast -O4
+224 octopus.nosc.mil, gcc 2.5.6, gcc -DUNIX -O2
+225 acc -DCTimer -O4 -Atarg=c400
+226 cc -DUNIX -O4
+227 Sun C 1.0, cc -DUNIX -O
+228 gcc 2.4.5, gcc -DUNIX -O2
+229 gcc 2.5.6, gcc -DUNIX -O2
+230 ExpertBoard 8449 motherboard, 256 KB L2 cache, 16 MB Fast Page DRAM,
+    gcc 2.5.7, gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+231 L2 Cache Enabled. ExpertBoard 8449 motherboard, 256 KB L2 cache,
+    16 MB Fast Page DRAM, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+232 L2 Cache Disabled. ExpertBoard 8449 motherboard, 256 KB L2 cache,
+    16 MB Fast Page DRAM, gcc 2.5.7,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -funroll-loops
+233 Sun C 1.0, cc -DUNIX -fast -O4
+234 Sun C 1.1, cc -DUNIX -fast -O4
+235 DCA/2 motherboard, 16MBytes fast RAM, gcc 2.5.8,
+    gcc -DUNIX -O2 -m486 -fomit-frame-pointer -fexpensive-optimizations
+236 cc -DUNIX -O4
+237 cc -DUNIX -O4
+238 cc -DUNIX -O0
+239 acc -DCTimer -O4 -Atarg=c100
+240 Sun C 1.0, cc -DUNIX
+241 cc -DUNIX -O0
+242 ---
+243 Sun C 1.0, cc -DUNIX
+244 Sun C 1.0, cc -DUNIX
+245 Watcom C/C++ 10.5 Dos4GW -otexan -fp3 -zp8 -5r -dMSC
+    128 KB cache SIS chipset 20 MB RAM
+246 Sun C 1.0, cc -DUNIX -fast -O4
+247 ISA/VLB, gcc 2.5.7, gcc -DUNIX -O6 -m486 -funroll-loops
+                            -fomit-frame-pointer -finline-functions
+248 gcc 2.3.3, gcc -DUNIX -m486 -O6 -funroll-loops -finline-functions
+249 gcc 2.6.3, gcc -DUNIX -O2. 16MB RAM, 256KB external L2 cache
+250 cc -DUNIX -O
+251 gcc 2.3.3, gcc -DUNIX -m486 -O2 -finline-functions
+252 gcc 2.2.2, gcc -DUNIX -m486 -O2 -funroll-all-loops
+253 gcc 2.2.2, gcc -DUNIX -DROPT -m486 -O2 -funroll-all-loops
+254 gcc 2.2.2, gcc -DUNIX -m486 -O2 -funroll-all-loops -finline-functions
+255 Watcom C/C++ 10.5 Dos4GW No optimization -dMSC
+    128 KB cache SIS chipset 20 MB RAM
+256 gcc 1.3.9, gcc -DUNIX -O
+257 Borland C++ V1.0 for OS/2 V1.0. AMI Enterprise Mk III motherboard,
+    16MB RAM, 256KB cache. EISA & VL bus.
+258 cc -DUNIX_Old
+259 Norcroft C V5.06
+260 gcc 2.2.2, gcc -DUNIX -DROPT -m486 -funroll-all-loops
+261 cc -DUNIX -O2
+262 Think C 5.0.4
+263 Sun C 1.0, cc -DUNIX -fast -O4
+264 IBM C Set/2 V1.0, CSD Level CS00050, icc /G4 /O+ /Gs+ /DMSC /DROPT,
+    ISA, 256KB SRAM External Cache, 16MB RAM.
+265 SAS/C 6.0, ROPT, Global Optimization Enabled
+266 cc -DUNIX_Old -O3
+267 THINK C 5.0.4
+268 cc -DUNIX
+269 gcc 2.7.2, gcc -s -O4 -pipe -DUNIX -DROPT -v
+270 ---
+271 (none given)
+272 cc -DUNIX -s +O3 -Wg,-All -lm
+273 cc +O2 -DUNIX -DROPT -v
+274 gcc 1.93,  gcc -DUNIX -O2
+275 cc -DUNIX_Old -O
+276 cc -DUNIX -O4 -dalign -Bstatic
+277 cc -DUNIX -O4 -Qoption iropt -l9
+278 cc -DUNIX -O4 -dalign -Bstatic -Qoption iropt -l9
+279 gcc 2.4.5, gcc -DUNIX -O2 -ffast-math -funroll-loops
+280 gcc 2.3.3, gcc -DUNIX -m486 -O6 -funroll-loops -finline-functions
+281 gcc 2.3.3, gcc -DUNIX -m486 -O6 -funroll-loops -finline-functions
+282 gcc 2.2.2, gcc -DUNIX -m486 -O2 -funroll-all-loops -finline-functions
+283 gcc 2.2.2, gcc -DUNIX -DROPT -m486 -O2 -funroll-all-loops
+284 gcc 2.2.2, gcc -DUNIX -m486 -O2 -funroll-loops -finline-functions
+                   -fexpensive-optimizations
+285 gcc 2.2.2, gcc -DUNIX -DROPT -m486 -O2 -funroll-all-loops
+286 gcc 2.2.2, gcc -DUNIX -m486 -O2 -funroll-all-loops -finline-functions
+287 Sun C 1.0,  cc -DUNIX
+288 gcc 2.4.1, gcc -DUNIX -m486 -O2 -funroll-all-loops -finline-functions
+289 gcc 2.2.2, gcc -DUNIX -DROPT -m486 -funroll-all-loops
+290 gcc 2.3.3, gcc -DUNIX -O2
+291 gcc 2.2.2, gcc -DUNIX -DROPT -m486 -funroll-all-loops
+292 Sun C 1.0,  cc -DUNIX -fast -O4 -Bstatic
+293 gcc 1.37.1,gcc -DUNIX -O
+294 Green Hills C-88000 1.8.5, cc -DHPUX -DUNIX_Old -O
+295 cc -DUNIX -O3 -Bstatic -ffpa
+296 Sun C 1.0, cc -DUNIX -DROPT
+297 Watcom C/C++ 10.5 Dos4GW -otexan -fp3 -zp8 -5r -dMSC
+    128 KB cache 8 MB RAM
+298 Watcom C/C++ 10.5 Dos4GW No optimization -dMSc
+    128 KB cache 8 MB RAM
+299 16K internal I&D caches, 16MB 32-bit RAM (16 MHz), no external
+    cache, no FPU or hardware 'DIV', Norcroft C 5.06, cc -ff -zps1
+300 cc -DUNIX -s +O3
+301 cc -DUNIX -s +O3 -Wg,-All -lm
+302 gcc 2.3.3, gcc -DUNIX -O2
+303 Aztec C V5.0a, cc -c2 -f8 -safu -me -dAmiga -dROPT
+304 gcc 2.5.6, gcc -DUNIX -O2 -fomit-frame-pointer -finline-functions
+                   -funroll-all-loops
+305 ---
+306 PureC 1.1, pcc -2 -8
+307 gcc 2.6.3, gcc -O2
+308 gcc 2.3.3, gcc -DUNIX -O2 -fomit-frame-pointer -ffast-math -m68881
+                   -m68020
+309 cc -DUNIX -O3 -Bstatic -f68881
+310 cc -DUNIX -O3 -f68881
+311 gcc Tool#1(X68) (based on gcc 1.42), gcc -O -m68881 -cc1
+    -stack=250000 -DMSC
+312 cc -DUNIX -O3 -Bstatic -fsoft
+313 ---
+314 Microsoft C-7, cl -DMSC, software floating-point
+315 Microsoft C-7, cl -DMSC, software floating-point
+316 ---
+317 Microsoft C-6, cl -DMSC, software floating-point
+318 gcc Tool#1(X68) (based on gcc 1.42), gcc -O -cc1 -stack=250000 -DMSC
+319 cc -DUNIX_Old
+320 Microsoft C-7, cl -DMSC, software floating-point
+---
+###
+REF:
+1   Al Aburto, aburto@marlin.nosc.mil, 20 Dec 1992
+2   Bo Thide', bt@irfu.se, 21 Dec 1992
+3   Paul van Deurzen, deurzenl@ksla.nl, 11 Jan 1993
+4   R.W.W. Hooft, hooft@xray.chem.ruu.nl, 11 Jan 1993
+5   Jim Hull, hull@hpsal2.cup.hp.com, 12 Jan 1993
+6   Meinhard E. Mayer, hardy@golem.ps.uci.edu, 12 Jan 1993
+7   Andres Kruse, kruse@aritra.desy.de, 13 Jan 1993
+8   Roger Uzun, uzun@crash.cts.com, 14 Jan 1993
+9   Mike Wilson, mikew@cs.pdx.edu, 18 Jan 1993
+10  Ari P Seitsonen, aps@kata.hut.fi, 19 Jan 1993
+11  Antti Miettinen, apm@kikka.hut.fi, 19 Jan 1993
+12  Al Aburto, aburto@marlin.nosc.mil, 22 Jan 1993
+13  Pedro A.M. Vazquez, vazquez@iqm.unicamp.br, 23 Jan 1993
+14  Andreas Landhaeusser, rz5j@Tschaikowsky.rz.go.dlr.de, 26 Jan 1993
+15  Olle Franceschi, olle@tfu.sr.se, 26 Jan 1993
+16  Akihiro Hashimoto, hashimoto@chiba-u.ac.jp, 27 Jan 1993
+17  Philippe MARTINEZ, phm@ccvr.fr, 27 Jan 1993
+18  Hugo E. Gunnarsen, hugogu@lise.unit.no, 14 Feb 1993
+19  Al Aburto, aburto@marlin.nosc.mil, 01 Mar 1993
+20  Mathew Lim, M.Lim@anu.edu.au, 04 Mar 1993
+21  Marc GINGOLD, marc@tobit.saclay.cea.fr, 05 Mar 1993
+22  Bill Broadley, broadley@neurocog.lrdc.pitt.edu, 13 Mar 1993
+23  Simon Gornall, sjg@phlim.ph.kcl.ac.uk, 22 Mar 1993
+24  Al Aburto, aburto@marlin.nosc.mil, 22 MAr 1993
+25  Michael Fingerhut, mf@ircam.fr, 23 Mar 1993
+26  Brad Wilson, i1c192@rick.cs.ubc.ca, 23 Mar 1993
+27  Francois Neirac, neirac@cenerg.cma.fr, 24 Mar 1993
+28  Tim Pointing, tim@ben.dciem.dnd.ca, 24 Mar 1993
+29  Al Aburto, aburto@marlin.nosc.mil, 27 Mar 1993
+30  Sherm Riemenschneider, sherm@approx.math.ualberta.ca, 27 Mar 1993
+31  Mario A. Guerra, mguerra@inforisc.cr, 01 Apr 1993
+32  Rene Lampe, rene@cvgis.prime.com, 02 Apr 1993
+33  Meinhard E. Mayer, hardy@golem.ps.uci.edu, 13 Apr 1993
+34  Maurice Janssen, mhmj@chem.vu.nl, 16 Apr 1993
+35  Burkhard Neidecker-Lutz, neideck@nestvx.enet.dec.com, 18 May 1993
+36  Roger Uzun, uzun@crash.cts.com, 23 Jun 1993
+37  Faculteit Bedrijfskunde, CVisser@fac.fbk.eur.nl, 01 Jul 1993
+38  Gail L. Grant, John Shakshober, grant@pa.dec.com, 01 Jul 1993
+39  Hennie Rautenbach, hennie@info1.sabinet.co.za, 08 Jul 1993
+40  Derek Fong, thewho@plume.mit.edu, 23 Jul 1993
+41  John E. Stone, johns@cs.umr.edu, 27 Jul 1993
+42  Gail L. Grant, grant@pa.dec.com, 03 Aug 1993
+43  Roger Uzun, uzun@crash.cts.com, 19 Aug 1993
+44  Lionel Lacassagne, lacass_l@boson.epita.fr, 10 Sep 1993
+45  Lionel Lacassagne, lacass_l@boson.epita.fr, 11 Sep 1993
+46  Bo Thide', bt@irfu.se, 20 Sep 1993
+47  Bo Thide', bt@irfu.se, 12 Oct 1993
+48  Henrik Harmsen, d9hh@dtek.chalmers.se, 16 Oct 1993
+49  Skip Sauls, skip@cy.cs.olemiss.edu, 18 Oct 1993
+50  19 Oct 1993
+51  joginpalli@msbcs.enet.dec.com, 25 Oct 1993
+52  Oleg Solovianov, solovian@axcrnc.cern.ch, 31 Oct 1993
+53  Roger Uzun, uzun@crash.cts.com, 31 Oct 1993
+54  Mohammad Bahathir Hashim, s8046@cs.shizuoka.ac.jp, 04 Nov 1993
+55  Michael Ritzert, mjr@dyn.geo.uni-bonn.de, 13 Nov 1993
+56  Eliot Shepard, eliot@barclay.harvard.edu, 23 Nov 1993
+57  Al Aburto, aburto@marlin.nosc.mil, 24 Nov 1993
+58  Eliot Shepard, eliot@asc.harvard.edu, 29 Nov 1993
+59  Al Aburto, aburto@marlin.nosc.mil, 12 Dec 1993
+60  Andres Kruse, kruse@caldev.desy.de, 13 Dec 1993
+61  Kristian Wedberg, wedberg@mednet.gu.se, 15 Dec 1993
+62  Petri Nordlund, petrin@mits.mdata.fi, 18 Dec 1993
+63  Al Aburto, aburto@athens.nosc.mil, 06 Jan 1994
+64  Jack Hunt, jack_hunt@jhuapl.edu, 12 Jan 1994
+65  Marty Leisner, leisner@sdsp.mc.xerox.com, 13 Jan 1994
+66  Pekka J{rvel{inen, jarvelai@csc.fi, 15 Feb 1994
+67  Mario Guerra, mguerra@ns.cr, 22 Feb 1994
+68  nsa@link.hacktic.nl, 23 Feb 1994
+69  Sherm Riemenschneider, sherm@approx.math.ualberta.ca, 20 Mar 1994
+70  Craig S. Steele, steele@isi.edu, 11 Apr 1994
+71  Bill Broadley, broadley@neurocog.lrdc.pitt.edu, 08 May 1994
+72  Marc-Michael Brandis, brandis@inf.ethz.ch, 11 May 1994
+73  Bill Broadley, broadley@neurocog.lrdc.pitt.edu, 11 May 1994
+74  Harlan W Stockman, hwstock@saix531.energylan.sandia.gov, 18 May 1994
+75  Evan Torrie, torrie@cs.stanford.edu, 31 May 1994
+76  Evert-Jan Nijhof, rysbb.rys.ruu.nl, 4 Jul 1994
+77  Wolfram Wagner, ww@mpi-sb.mpg.de, 19 Jul 1994
+78  Mario Guerra, mguerra@cariari.ucr.ac.cr, 10 Aug 1994
+79  Zygmunt Krawczyk, zkr@ita.pwr.wroc.pl, 22 Aug 1994
+80  Eliot Shepard, shepard@cfa.harvard.edu, 09 Sep 1994
+81  Zygmunt Krawczyk, zkr@ita.pwr.wroc.pl, 09 Sep 1994
+82  Kristian Wedberg, wedberg@mednet.gu.se, 28 Oct 1994
+83  Hugo Eide Gunnarsen, hugogu@oslo.sgi.com, 02 Nov 1994
+84  Hugo Eide Gunnarsen, hugogu@oslo.sgi.com, 04 Nov 1994
+85  Al Aburto, aburto@marlin.nosc.mil, 05 Nov 1994
+86  Pekka Jarvelainen, jarvelai@csc.fi, 12 Jan 1995
+87  Pekka Jarvelainen, jarvelai@csc.fi, 13 Jan 1995
+88  Oleg Solovianov, solovian@vxcern.cern.ch, 06 Feb 1995
+89  Rob Burrowes, rob@cs.aukuni.ac.nz, 09 Feb 1995
+90  Massimo Ianigro, massimo@area.ba.cnr.it, 17 Feb 1995
+91  Gene Zimmerman, ezimmerm@cs.uwyo.edu, 18 Mar 1995
+92  Frank Ferrie, ferrie@cim.mcgill.ca, 28 Mar 1995
+93  Zygmunt Krawczyk, zkr@ita.pwr.wroc.pl, 10 Apr 1995
+94  Derek A. Fong, thewho@gusty.whoi.edu, 02 May 1995
+95  Petr Stehlik, stehlik@Leo1.zlin.vutbr.cz, 20 Jul 1995
+96  Gero Maeder, maeder@e-technik.tu-ilmenau.de, 08 Aug 1995
+97  Bo Thide', bt@irfu.se, 28 Aug 1995
+98  Paul Caskey, pcaskey@swcp.com, 16 Oct 1995
+99  Paul Caskey, pcaskey@swcp.com, 07 Nov 1995
+100 Robert Debath, rdebath@cix.compulink.co.uk, 26 Nov 1995
+101 Al Aburto, aburto@nosc.mil, 30 Nov 1995
+102 Chris Thewalt, thewalt@canuck.ce.berkeley.edu, 05 Dec 1995
+103 Eric Carr, carr@santafe.edu, 16 Dec 1995
+104 Meinhard E. Mayer, hardy@lynx.ps.uci.edu, 21 Feb 1996
+105 Lee Hetherington, ilh@sls.lcs.mit.edu, 22 Feb 1996
+106 Zack Smith, zacksmith@mcimail.com, 10 Mar 1996
+107 Steven G. Johnson, stevenj@mit.edu, 15 Mar 1996
+108 Partha Tirumalai, Sun Microsystems, ppt@eng.sun.com, 26 Mar 1996
+109 Thomas F. Telkamp, T.F.Telkamp@fys.ruu.nl, 31 Mar 1996
+110 Burkhard Neidecker-Lutz, neideck@kar.dec.com, 04 Apr 1996
+111 Scott Coppen, scoppen@emerald.tufts.edu, 19 Apr 1996
+112 Roger Uzun, uzun@crash.cts.com, 26 Apr 1996
+113 Kees Jan Koster, dutchman@spase.nk, 29 Apr 1996
+114 Thomas J Balfe, tbalfe@t-rex.tioga.com, 01 May 1996
+115 Eren Koton, eek93el@soton.ac.uk, 15 May 1996
+116 Kari Seppanen, kse@tell.tte.vtt.fi, 31 May 1996
+117 Luis Ignacio Martinez Castillo,limartin@cet.mty.itesm.mx,20 Aug 1996
+118 Manuel Blanca, 101347.3363@compuserve.com, 01 Sep 1996
+119 Manuel Blanca, 101347.3363@compuserve.com, 02 Sep 1996
+120 Stephen Carpenter, sac@uvo.dec.com, 07 Sep 1996
+121 Manuel Blanca, 101347.3363@compuserve.com, 08 Sep 1996
+122 Stephen Carpenter, sac@uvo.dec.com, 08 Sep 1996
+123 Manuel Blanca, 101347.3363@compuserve.com, 12 Sep 1996
+124 Manuel Blanca, 101347.3363@compuserve.com, 16 Sep 1996
+125 Manuel Blanca, 101347.3363@compuserve.com, 18 Sep 1996
+126 Paul Caskey, pcaskey@swcp.com, 27 Sep 1996
+127 Ilja Heitlager, ilja@cs.utwente.nl, 29 Sep 1996
+128 Manuel Blanca, 101347.3363@compuserve.com, 05 Oct 1996
+129 Manuel Blanca, 101347.3363@compuserve.com, 07 Oct 1996
+130 Sverker Edvardsson, sverkere@fmi.mh.se, 27 Oct 1996
+131 Frank Wennmohs, Frank.Wennmohs@rz.ruhr-uni-bochum.de, 03 Nov 1996
+132 Al Aburto, aburto@nosc.mil, 04 Nov 1996
+133 Roy Longbottom, 101323.2241@compuserve.com, 05 Nov 1996
+134 Manuel Blanca, 101347.3363@compuserve.com, 18 Nov 1996
+135 Paul Caskey, pcaskey@swcp.com, 04 Dec 1996
+136 Paul Caskey, pcaskey@swcp.com, 08 Jan 1997
+137 Paul Caskey, pcaskey@swcp.com, 28 Jan 1997
+138 Manuel Blanca, 101347.3363@compuserve.com, 28 Jan 1997
+139 Paul Caskey, pcaskey@swcp.com, 31 Jan 1997
+140 Paul Caskey, pcaskey@swcp.com, 07 Feb 1997
+141 Jean-Marc Drezet, drezet@math.jussieu.fr, 27 Feb 1997
+142 Hugo Eide Gunnarsen, hugogu@oslo.sgi.com, 26 Mar 1997
+143 Kari Seppanen, kse@farfalle.tte.vtt.fi, 01 Apr 1997
+144 David Bass, david.bass@eurocontrol.be, 15 Apr 1997
+145 Wolfram Wagner, ww@mpi-sb.mpg.de, 17 Apr 1997
+146 Peter Teichmann, sol@mail.wh1.tu-dresden.de, 02 May 1997
+147 Thomas Telkamp, Thomas.Telkamp@ibbnet.nl, 13 May 1997
+148 Manuel Jose Blanca Molinos, 101347.3363@compuserve.com, 18 May 1997
+149 Manuel Blanca, 101347.3363@compuserve.com, 02 Aug 1997
+150 Manuel Blanca, 101347.3363@compuserve.com, 11 Sep 1997
+151 Paul Caskey, pcaskey@swcp.com, 26 Sep 1997
+
+Al Aburto
+aburto@nosc.mil
