@@ -24,6 +24,7 @@ Results as of 26 Sep 1997:
     System           OS, Compiler           CPU/FPU    FPU  MFLOPS(1)  REF
                                                       (MHz)               
 ### ---------------- -------------------- ----------- ----- --------- ----
+0005AMD Ryzen 9      Windows 10           3950X        4200 5397.1214  152
 001 SGI Origin 200   Irix 6.4             R10k--04CPU   180  347.4459  151
 002 Sun Ultra 2      Solaris 2.5.1        Ultra2-2CPU   300  207.7866  151
 003 Alphasystem 4000 Digital Unix V4.0B   21164-2CPU    466  180.2054  147
@@ -106,6 +107,7 @@ Results as of 26 Sep 1997:
 080 HP 9000/730      HP-UX 9.01           PA-RISC 1.1    66   30.0850   22
 081 HP 9000/715t     HP-UX 9.05           PA-RISC7100    33   30.0355   81
 082 HP 9000/715t     HP-UX 9.03           PA-RISC7100    33   29.9958   79
+0825DEC 3000/600 AXP OpenVMS V8.4         DEC 21064     175   29.8529  152
 083 SGI Indigo2      Irix 4.0.5H          R4400/R4010   150   29.6507   64
 084 Pentium P5-166   Windows 95           Pentium       166   29.4487  138
 085 DEC 3000/600 AXP OSF/1 V1.3a          DEC 21064     175   29.4355   51
@@ -346,6 +348,7 @@ Results as of 26 Sep 1997:
 320 386SX-25         SCO UNIX 3.2.2       386SX/-----    25    0.0055   32
 ---
 ###
+000.5 cl
 001 MIPSPRO v7.1.1, cc -O3 -64 -DUNIX, 1GB RAM, 1MB cache
     NOTE: The R10000 is a 64-bit machine with 64-bit OS & compiler.
 002 GNU C 2.7.2, gcc -O2 -mv8 -DUNIX, 1MB Cache, 128MB RAM
@@ -494,6 +497,7 @@ Results as of 26 Sep 1997:
 080 cc -DUNIX +O3
 081 HP C 9.61, cc -DUNIX -O
 082 HP C 9.61, cc -DUNIX -O
+082.5 CC
 083 cc 3.10.1, cc -DUNIX -DROPT -O3 -mips2
 084 430VX Chipset, 32 MB RAM, 256 KB Pipelined Burst SRAM Cache,
     Borland C++ V5, bcc32i -DBORLAND_C -O2M -5
@@ -949,6 +953,7 @@ REF:
 149 Manuel Blanca, 101347.3363@compuserve.com, 02 Aug 1997
 150 Manuel Blanca, 101347.3363@compuserve.com, 11 Sep 1997
 151 Paul Caskey, pcaskey@swcp.com, 26 Sep 1997
+152 Sven Killig, sven@killig.de, 08 Sep 2020
 
 Al Aburto
 aburto@nosc.mil
