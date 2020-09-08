@@ -1094,7 +1094,7 @@ int dtime(double p[])
 /*  Windows NT (32 bit) dtime() routine             */
 /*  Provided by: Piers Haken, piersh@microsoft.com  */
 /****************************************************/
-#ifdef WIN32
+#if defined(WIN32) || defined(_WIN32)
 #include <windows.h>
 
 int dtime(double p[])
